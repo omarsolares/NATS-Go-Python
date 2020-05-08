@@ -36,7 +36,7 @@ async def run(loop):
         mycol = mydb["casos"]
         x = mycol.insert_one(data)
         #inserto en redis
-        #myclientredis.set(str(x.inserted_id),body)
+        myclientredis.set(str(x.inserted_id),body)
 
     subject = "lab"
     await sc.subscribe(subject,durable_name="3F45",cb = cb)
