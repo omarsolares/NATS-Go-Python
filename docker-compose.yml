@@ -1,0 +1,10 @@
+version: "2"
+
+services:
+  app-python:
+    build: Python-listener/.
+
+  app-golang:
+    build: Go-pub/.
+    ports:
+      - "8082:8082"

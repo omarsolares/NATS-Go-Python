@@ -1,0 +1,5 @@
+pymongo
+redis
+nats-python
+asyncio-nats-client
+asyncio-nats-streaming
