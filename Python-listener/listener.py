@@ -8,9 +8,9 @@ import redis
 from nats.aio.client import Client as NATS
 from stan.aio.client import Client as STAN
 
-myclientmongo = pymongo.MongoClient("mongodb://35.237.232.19:27017/")
+myclientmongo = pymongo.MongoClient("mongodb://35.237.178.105:27017/")
 myclientredis = redis.Redis(
-    host='35.237.232.19',
+    host='35.237.178.105',
     port=6379, 
     password='',
     db=0
@@ -19,7 +19,7 @@ myclientredis = redis.Redis(
 async def run(loop):
     ##conexion con nats
     nc = NATS()
-    await nc.connect(io_loop=loop, servers= ["nats://104.197.208.242:4222"])
+    await nc.connect(io_loop=loop, servers= ["nats://34.71.110.116:4222"])
 
     sc = STAN()
     await sc.connect("test-cluster","listener-3F45",nats=nc)
