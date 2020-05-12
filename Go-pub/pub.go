@@ -85,8 +85,8 @@ var router = mux.NewRouter()
 
 func main() {
 
-	flag.StringVar(&URL, "s","nats://104.197.208.242:4222","")
-	flag.StringVar(&URL, "server","nats://104.197.208.242:4222","")
+	flag.StringVar(&URL, "s","nats://34.71.110.116:4222","")
+	flag.StringVar(&URL, "server","nats://34.71.110.116:4222","")
 
 	flag.StringVar(&clusterID,"c","test-cluster","")
 	flag.StringVar(&clusterID,"cluster","test-cluster","")
